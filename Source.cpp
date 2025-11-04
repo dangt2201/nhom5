@@ -12,20 +12,14 @@ int hieu(int a, int b){
 }
 int tich(int a, int b);
 float thuong(int a, int b);
-bool kiemTraSoHoanThien(int n) {
-    if (n <= 1) {
-        return false;
+void soSanhHaiSo(int a, int b) {
+    if (a == b) {
+        cout << "a = b" << endl;
+    } else if (a > b) {
+        cout << "a > b." << endl;
+    } else {
+        cout << "a < b" << endl;
     }
-    int tong_uoc = 1; 
-    for (int i = 2; i <= sqrt(n); ++i) {
-        if (n % i == 0) { 
-            tong_uoc += i; 
-            if (i * i != n) {
-                tong_uoc += n / i;
-            }
-        }
-    }
-    return tong_uoc == n;
 }
 int main()
 {	int a,b ;
@@ -34,6 +28,7 @@ int main()
 	cout << "DAY LA CHUONG TRINH DE THUC HANH GIT";
 	cout<<"Tong =" << tong(a,b);
 	cout<<"Hieu =" << hieu(a,b);
+	cout<<"\nSo sanh 2 so:" <<soSanhHaiSo(a,b);
 	system("pause");
 	return 0;
 }
