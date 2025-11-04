@@ -32,8 +32,6 @@ bool ktsht(int n) {
             sum += i;
         }
     }
-
-    // Nếu tổng các ước số bằng chính n, thì n là số hoàn thiện
     return sum == n;
 }
 int main()
