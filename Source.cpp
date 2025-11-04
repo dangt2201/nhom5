@@ -21,10 +21,34 @@ void soSanhHaiSo(int a, int b) {
         cout << "a < b" << endl;
     }
 }
+bool ktsht(int n) {
+    if (n <= 1) return false;  
+
+    int sum = 0;
+
+    
+    for (int i = 1; i <= n / 2; ++i) {
+        if (n % i == 0) {
+            sum += i;
+        }
+    }
+
+    // Nếu tổng các ước số bằng chính n, thì n là số hoàn thiện
+    return sum == n;
+}
 int main()
 {	int a,b ;
     a = 10;
 	b = 20;
+	int number;
+    cout << "Nhap mot so nguyen: ";
+    cin >> number;
+
+    if (ktsht(number)) {
+        cout << number << " la so hoan thien." << endl;
+    } else {
+        cout << number << " khong la so hoan thien." << endl;
+    }
 	cout << "DAY LA CHUONG TRINH DE THUC HANH GIT";
 	cout<<"Tong =" << tong(a,b);
 	cout<<"Hieu =" << hieu(a,b);
