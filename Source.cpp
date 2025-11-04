@@ -50,7 +50,8 @@ int main()
 	cout << "DAY LA CHUONG TRINH DE THUC HANH GIT";
 	cout<<"Tong =" << tong(a,b);
 	cout<<"Hieu =" << hieu(a,b);
-	cout<<"\nSo sanh 2 so:" <<soSanhHaiSo(a,b);
+	cout<<"\nSo sanh 2 so:" ;
+	soSanhHaiSo(a,b);
 	system("pause");
 	return 0;
 }
